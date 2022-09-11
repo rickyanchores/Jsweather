@@ -29,7 +29,7 @@ let icon = document.querySelector('.icon')
 
 button.addEventListener('click', () => {
 
-fetch('https://api.openweathermap.org/data/2.5/weather?q='+inputValue.value+'&appid=62d768686c18a4ed0026aaefe7330c87')
+fetch('https://api.openweathermap.org/data/2.5/weather?q='+inputValue.value+'&units=metric&appid=62d768686c18a4ed0026aaefe7330c87')
     .then(response => response.json())
    
     .then(data => {
@@ -38,7 +38,7 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q='+inputValue.value+'&ap
         let nameValue = data['name'];
         let tempValue = data['main']['temp'];
         let descriptionValue = data['weather'][0]['description'];
-        
+
         let iconValue = data['weather'][0]['icon'];
 
         name.innerHTML = nameValue;
