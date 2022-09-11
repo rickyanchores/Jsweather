@@ -25,21 +25,28 @@ let inputValue = document.querySelector('.inputValue');
 let name = document.querySelector('.location-name');
 let temperature = document.querySelector('.temperature-degree');
 let description = document.querySelector('.temperature-description');
-
+let icon = document.querySelector('.icon')
 
 button.addEventListener('click', () => {
 
 fetch('https://api.openweathermap.org/data/2.5/weather?q='+inputValue.value+'&appid=62d768686c18a4ed0026aaefe7330c87')
     .then(response => response.json())
+   
     .then(data => {
+        console.log(data)
+
         let nameValue = data['name'];
         let tempValue = data['main']['temp'];
         let descriptionValue = data['weather'][0]['description'];
+        
+        let iconValue = data['weather'][0]['icon'];
 
         name.innerHTML = nameValue;
         temperature.innerHTML = tempValue;
         description.innerHTML = descriptionValue;
-    })
+
+        icon.innerHTML = iconValue;
+    }) 
     .catch(err => alert("Wrong CITY"))
 })
 
