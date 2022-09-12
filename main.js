@@ -25,7 +25,9 @@ let inputValue = document.querySelector('.inputValue');
 let name = document.querySelector('.location-name');
 let temperature = document.querySelector('.temperature-degree');
 let description = document.querySelector('.temperature-description');
-let icon = document.querySelector('.icon')
+let icon = document.querySelector('.icon');
+let humidity = document.querySelector('.humidity');
+let feelsLike = document.querySelector('.feels_like')
 
 button.addEventListener('click', () => {
 
@@ -35,17 +37,28 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q='+inputValue.value+'&un
     .then(data => {
         console.log(data)
 
+        
         let nameValue = data['name'];
         let tempValue = data['main']['temp'];
         let descriptionValue = data['weather'][0]['description'];
 
         let iconValue = data['weather'][0]['icon'];
+     
+        let humidityValue = data['main']['humidity']
+        let feelslikeValue = data['main']['feels_like']
+
+
 
         name.innerHTML = nameValue;
         temperature.innerHTML = tempValue;
         description.innerHTML = descriptionValue;
 
+        
         icon.innerHTML = iconValue;
+
+        humidity.innerHTML = humidityValue;
+        feelsLike.innerHTML = feelslikeValue;
+
     }) 
     .catch(err => alert("Wrong CITY"))
 })
