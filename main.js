@@ -54,12 +54,12 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q='+inputValue.value+'&un
         description.innerHTML = descriptionValue;
 
         //ADD ICON 
-        icon.innerHTML="<img src=http://openweathermap.org/img/wn/"+iconValue+"@2x.png>";
+        icon.innerHTML="<img src=http://openweathermap.org/img/wn/"+iconValue+"@4x.png>";
         //
         
 
-        humidity.innerHTML = humidityValue;
-        feelsLike.innerHTML = feelslikeValue;
+        //humidity.innerHTML = humidityValue;
+        //feelsLike.innerHTML = feelslikeValue;
 
     }) 
     .catch(err => alert("Wrong CITY"))
