@@ -5,28 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/styles.css">
-    <title>Simple JS Weather API</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jura&family=Roboto&display=swap" rel="stylesheet"
+
 </head>
 <body>
 
-    <input type="text" class="inputValue" placeholder="Enter city">
-    <button class="btn">Submit</button>
-    
-    <div class="location">
-        <h1 class="location-name">Name</h1>
-        <i class="icon" src=""></i>
-    </div>
 
-    <div class="temperature">
-        <div class="degree-section">
-            <h2 class="temperature-degree">--</h2>
-            <span>C</span>
+    <div class="container">
+        <div class="left">
+            <h1>JS Weather</h1>
+            <input type="text" class="inputValue" placeholder="Search for city..">
+            <button class="btn">Submit</button>
         </div>
- 
-        <div class="temperature-description">.....</div>
-        <div class="humidity">...</div>
-        <div class="feels_like">it feels like...</div>
+    
+        
+        <div class="card">
+            <div class="location">
+                <h1 class="location-name">City</h1>
+                
+            </div>
+                 <i class="icon" src="">---</i> 
+            <div class="temperature">
+                <div class="degree-section">
+                    <h2 class="temperature-degree">--</h2>
+                    <span>C</span>
+                </div>
+         
+                <div class="temperature-description">.....</div>
+                <div class="humidity">...</div>
+                <div class="feels_like">it feels like...</div>
+            </div>
+        </div>
+
+
     </div>
+    <footer>
+        <h3>Created by Ricky A 2022</h3>
+    </footer>
+
+    
+   
 
     <script src="main.js"></script>
 </body>

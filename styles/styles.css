@@ -6,56 +6,78 @@
 }
 
 body {
-  background: #041020;
+  background: rgba(20, 33, 75, 0.86);
   color: whitesmoke;
+  font-family: Jura,sans-serif;
+}
+
+footer {
+  text-align: start;
+  width: 80%;
+  margin: auto;
+}
+
+.container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 90vh;
+}
+
+.left {
+  padding: 1em;
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100vh;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-.inputValue {
-  background: whitesmoke;
-  border: none;
-  padding: 1em 2em;
+.left h1 {
+  text-transform: uppercase;
 }
 
-.btn {
+.left .inputValue {
+  background: #101634;
+  color: whitesmoke;
   border: none;
-  margin: 1em;
-  background-color: silver;
-  color: #333;
   padding: 1em 2em;
+  margin-top: 1em;
+}
+
+.left .btn {
+  border: none;
+  margin-top: 1em;
+  background-color: #101634;
+  color: whitesmoke;
+  font-family: Jura,sans-serif;
   font-weight: bolder;
   font-size: 18px;
+  padding: 1em;
+  width: 50%;
+  cursor: pointer;
 }
 
-.location {
-  height: 30vh;
-  width: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.left .btn:hover {
+  background: white;
+  color: #101634;
 }
 
-.temperature {
-  height: 30vh;
-  width: 50%;
+.card {
+  background-color: #101634;
+  border: none;
+  border-radius: 20px;
+  width: 30%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -70,7 +92,35 @@ body {
           align-items: center;
 }
 
-.degree-section {
+.card .location {
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card .temperature {
+  height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card .degree-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -80,7 +130,7 @@ body {
   cursor: pointer;
 }
 
-.degree-section span {
+.card .degree-section span {
   margin: 10px;
   font-size: 30px;
 }

@@ -5,53 +5,91 @@
 }
 
 body{
-    background: rgb(4, 16, 32);
+    background: rgba(20, 33, 75, 0.86);
     color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
+    font-family: Jura,sans-serif;
 }
-
-.inputValue{
-    background: whitesmoke;
-    border: none;
-    padding: 1em 2em;
+footer{
+    text-align: start;
+    width: 80%;
+    margin: auto;
 }
-.btn{
-    border: none;
-    margin: 1em;
-    background-color: silver;
-    color: #333;
-    padding: 1em 2em;
-    font-weight: bolder;
-    font-size: 18px;
-}
-
-.location{
-    height: 30vh;
-    width: 50%;
+.container{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    height: 90vh;
 }
 
-.temperature{
-    height: 30vh;
-    width: 50%;
+
+.left{
+    //border: 2px solid blue;
+    padding: 1em;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    h1{
+        text-transform: uppercase;
+    }
+    .inputValue{
+        background: rgba(16, 22, 52, 1);
+        color: whitesmoke;
+        border: none;
+        padding: 1em 2em;
+        margin-top: 1em;
+    }
+    .btn{
+        border: none;
+        margin-top: 1em;
+        background-color: rgba(16, 22, 52, 1);
+        color: whitesmoke;
+        font-family: Jura,sans-serif;
+        font-weight: bolder;
+        font-size: 18px;
+        padding: 1em;
+        width: 50%;
+        cursor: pointer;
+    }
+    .btn:hover{
+        background: white;
+        color: rgba(16, 22, 52, 1);
+    }
+}
+
+.card{
+    background-color: rgba(16, 22, 52, 1);
+    border: none;
+    border-radius: 20px;
+    width: 30%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    
+    .location{
+        padding: 1em;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .temperature{
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .degree-section{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    .degree-section span{
+        margin:10px;
+        font-size: 30px;
+    }
 }
 
-.degree-section{
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-}
-.degree-section span{
-    margin:10px;
-    font-size: 30px;
-}
