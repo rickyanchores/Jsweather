@@ -44,8 +44,8 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q='+inputValue.value+'&un
 
         let iconValue = data['weather'][0]['icon'];
      
-        let humidityValue = data['main']['humidity']
-        let feelslikeValue = data['main']['feels_like']
+        let humidityValue = data['main']['humidity'];
+        let feelslikeValue = data['main']['feels_like'];
 
 
 
@@ -53,8 +53,10 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q='+inputValue.value+'&un
         temperature.innerHTML = tempValue;
         description.innerHTML = descriptionValue;
 
+        //ADD ICON 
+        icon.innerHTML="<img src=http://openweathermap.org/img/wn/"+iconValue+"@2x.png>";
+        //
         
-        icon.innerHTML = iconValue;
 
         humidity.innerHTML = humidityValue;
         feelsLike.innerHTML = feelslikeValue;
